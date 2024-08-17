@@ -415,6 +415,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }   
 
 .faq-question h2{
@@ -423,6 +424,10 @@ a{
     line-height: 28px;
     letter-spacing: 0;
     color: #383838;
+}
+
+.faq-question:hover .faq-icon{
+    color: #E76F51;
 }
 
 .faq-question .faq-icon{
@@ -435,8 +440,8 @@ a{
     color: #E76F51;
 }
 
-.faq-question .faq-icon .icon-up{
-    display: none;
+.faq-question .faq-icon.active{
+    transform: rotate(180deg);
 }
 
 .faq-answer{

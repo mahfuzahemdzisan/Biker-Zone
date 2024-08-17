@@ -31,13 +31,9 @@ accordions.forEach(faq => {
         icon.classList.toggle('active')
 
         if(icon.classList.contains('active')){
-            iconUp.style.display = "inline-block"
-            iconDown.style.display = "none"
             answer.style.maxHeight = answer.scrollHeight + 'px'
         }
         else{
-            iconUp.style.display = "none"
-            iconDown.style.display = "inline-block"
             answer.style.maxHeight = null
         }
     })
