@@ -515,6 +515,75 @@ a{
 
 /* ------- Media Screen -------- */
 
+@media only screen and (max-width: 1280px){
+    .container{
+        width: 85%;
+    }
+    .banner-content{
+        width: 50%;
+        padding-right: 10px;
+    }
+    .banner-image{
+        width: 50%;
+    }
+    .banner-image .img-1{
+        width: 100%;
+    }
+    .fetured-card,.news-card,.review-card{
+        gap: 50px;
+    }
+
+    .faq-img{
+        width: 45%;
+    }
+    .faq-main-content{
+        width: 45%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: 90%;
+    }
+
+    /* Header Section */
+
+    .header{
+        padding: 20px 0;
+    }
+    .banner-content{
+        width: 60%;
+        padding-right: 10px;
+    }
+    .banner-image{
+        width: 40%;
+    }
+    .banner-image .img-1{
+        width: 100%;
+    }
+    
+
+    /* Fetured Section  */
+    .fetured-card{
+        gap: 100px;
+    }
+
+    /* FAQ Section  */
+    .faq-content{
+        flex-direction: column;
+        gap: 70px;
+    }
+    .faq-img{
+        width: 60%;
+    }
+    .faq-main-content{
+        width: 100%;
+        gap: 20px;
+    }
+}
+
 @media only screen and (max-width: 767px){
     .container{
         width: 94%;
