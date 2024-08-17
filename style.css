@@ -240,6 +240,10 @@ a{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
+.news-card .card img{
+    width: 100%;
+}
+
 .news-card .card .card-content{
     padding: 40px 0;
     display: flex;
@@ -307,7 +311,7 @@ a{
 .review-card .card{
     border: 1px solid #DEDEDE;
     border-radius: 5px;
-    width: 323px;
+    width: 322px;
     text-align: center;
     padding: 40px 35px;
     display: flex;
@@ -391,14 +395,14 @@ a{
     width: 100%;
 }
 
-.faq-card{
+.faq-main-content{
     width: 552px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.faq-card .card{
+.faq-main-content .faq-card{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -421,20 +425,26 @@ a{
     color: #383838;
 }
 
-.faq-question button{
-    border: transparent;
-    background-color: transparent;
+.faq-question .faq-icon{
     padding-left: 10px;
-}
-
-.faq-question button i{
     color: #425F6A;
     font-size: 26px;
-    cursor: pointer;
 }
 
-.faq-question button i:hover{
+.faq-question .faq-icon:hover{
     color: #E76F51;
+}
+
+.faq-question .faq-icon .icon-up{
+    display: none;
+}
+
+.faq-question .faq-icon.active .icon-down{
+    display: none;
+}
+
+.faq-question .faq-icon.active .icon-up{
+    display: inline-block;
 }
 
 .faq-answer{
@@ -578,6 +588,7 @@ a{
         gap: 20px;
     }
     .news-card .card{
+        width: 80%;
         padding: 20px;
     }
     .news-card .card-content{
@@ -614,13 +625,15 @@ a{
     .faq-content{
         gap: 70px;
     }
-    .faq-img img{
-        width: 350px;
+    .faq-img{
+        width: 70%;
+        margin: 0 auto;
     }
-    .faq-card{
+
+    .faq-main-content{
         gap: 18px;
     }
-    .faq-card .card{
+    .faq-main-content .faq-card{
         padding: 18px;
     }
     .faq-question h2{
@@ -647,7 +660,7 @@ a{
 @media only screen and (max-width: 480px){
     .container{
         width: 100%;
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     /* Header Section  */
@@ -685,6 +698,7 @@ a{
         gap: 17px;
     }
     .news-card .card{
+        width: 100%;
         padding: 17px;
     }
     .news-card .card-content{
@@ -726,10 +740,10 @@ a{
     .faq-img img{
         width: 274.2px;
     }
-    .faq-card{
+    .faq-main-content{
         gap: 16px;
     }
-    .faq-card .card{
+    .faq-main-content .faq-card{
         padding: 16px;
     }
     .faq-question h2{
