@@ -439,20 +439,14 @@ a{
     display: none;
 }
 
-.faq-question .faq-icon.active .icon-down{
-    display: none;
-}
-
-.faq-question .faq-icon.active .icon-up{
-    display: inline-block;
-}
-
 .faq-answer{
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0;
     color: #7E848C;
+    max-height: 0;
+    overflow: hidden;
 }
 
 /* Footer Section Start Here  */

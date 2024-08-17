@@ -16,3 +16,29 @@ closeMenu.addEventListener('click', () => {
     openMenu.style.display = "inline-block"
     closeMenu.style.display = "none"
 })
+
+/* Frequently Asked Questions - FAQ Section */
+
+const accordions = document.querySelectorAll('.faq-card')
+
+accordions.forEach(faq => {
+    const answer = faq.querySelector(".faq-answer")
+    const icon = faq.querySelector(".faq-icon")
+    const iconUp = faq.querySelector(".icon-up")
+    const iconDown = faq.querySelector(".icon-down")
+
+    faq.addEventListener('click', () => {
+        icon.classList.toggle('active')
+
+        if(icon.classList.contains('active')){
+            iconUp.style.display = "inline-block"
+            iconDown.style.display = "none"
+            answer.style.maxHeight = answer.scrollHeight + 'px'
+        }
+        else{
+            iconUp.style.display = "none"
+            iconDown.style.display = "inline-block"
+            answer.style.maxHeight = null
+        }
+    })
+})
