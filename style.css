@@ -40,11 +40,11 @@ a{
 .menu-bar{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     padding: 10px 0;
 }
 
 .menu{
+    align-items: center;
     display: flex;
 }
 
@@ -60,11 +60,11 @@ a{
     color: #E76F51;
 }
 
-.menu-bar .login{
+.menu .login{
     margin-left: 100px;
 }
 
-.menu-bar .login a{
+.menu .login a{
     padding: 10px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -74,7 +74,7 @@ a{
     border: 2px solid transparent;
 }
 
-.menu-bar .login a:hover{
+.menu .login a:hover{
     border-color: #E76F51;
     background-color: transparent;
     color: #E76F51;
@@ -592,11 +592,83 @@ a{
 
     /* Header Section  */
 
+
+
     .header{
         padding: 50px 0;
+        position: relative;
     }
-    .menu-bar{
-        display: none;
+
+    .navbar-container{
+        justify-content: space-between;
+    }
+    
+    .menu-bar .login{
+        margin: 0;
+    }
+
+    .menu{
+        flex-direction: column;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 10px;
+        height: fit-content;
+        background-color: transparent;
+        /* display: none; */
+    }
+    .menu .list-item,.menu .login{
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 20px;
+        background-color: #305d6ecc;
+        border-radius: 5px;
+        text-align: center;
+        transform-origin: top right;
+        opacity: 0;
+        animation: animateMenuItem .2s linear forwards;
+    }
+    .menu .login a{
+        background-color: transparent;
+        border: none;
+    }
+    .menu .login{
+        border: 2px solid transparent;
+        background-color: #E76F51;
+    }
+    .menu .login:hover{
+        border-color: #E76F51;
+        background-color: #305d6ecc;
+    }
+    .menu .list-item a,.menu .login a{
+        font-weight: 600;
+    }
+    .menu .list-item a:hover,.menu .login a:hover{
+        font-size: 20px;
+    }
+    .menu .list-item:nth-child(2){
+        animation-delay: .2s;
+    }
+    .menu .list-item:nth-child(3){
+        animation-delay: .4s;
+    }
+    .menu .list-item:nth-child(4){
+        animation-delay: .6s;
+    }
+    .menu .login{
+        animation-delay: .8s;
+    }
+    @keyframes animateMenuItem {
+        0%{
+            transform: rotateY(90deg);
+        }
+        100%{
+            transform: rotateY(0);
+            opacity: 1;
+        }
     }
     .banner-container{
         flex-direction: column;
@@ -604,9 +676,7 @@ a{
     .open-menu-bar{
         display: inline-block;
     }
-    .banner-container{
-        padding-top: 100px;
-    }
+    
     .banner-content{
         width: 100%;
         padding: 0 0 60px;
