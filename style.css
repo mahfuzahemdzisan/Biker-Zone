@@ -614,22 +614,24 @@ a{
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        gap: 10px;
         height: fit-content;
         background-color: transparent;
-        /* display: none; */
+        display: none;
     }
     .menu .list-item,.menu .login{
         width: 80%;
         margin: 0 auto;
         padding: 10px;
         font-size: 20px;
-        background-color: #305d6ecc;
+        background-color: #305d6ee6;
         border-radius: 5px;
         text-align: center;
         transform-origin: top right;
         opacity: 0;
         animation: animateMenuItem .2s linear forwards;
+    }
+    .menu .list-item{
+        margin-bottom: 10px;
     }
     .menu .login a{
         background-color: transparent;
@@ -641,7 +643,7 @@ a{
     }
     .menu .login:hover{
         border-color: #E76F51;
-        background-color: #305d6ecc;
+        background-color: #305d6ee6;
     }
     .menu .list-item a,.menu .login a{
         font-weight: 600;
